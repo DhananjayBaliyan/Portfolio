@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhananjay Portfolio</title>
-    <link rel="icon" href="https://i.ibb.co/zRsTj3p/Frame-1-37.png">
-
+    <!-- <link rel="icon" href="Portfolio-Website\files\bb.png"> -->
+    <link rel="icon" href="https://www.usebruno.com/favicon.ico">
 
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" class="stylesheet">
+    
 </head> 
 
 <body>
@@ -37,6 +38,8 @@
                 </div>
 
             </div>
+            
+
         </div> 
     </header>
  
@@ -218,11 +221,11 @@
                 <p>Get In Touch</p>
             </div>
             <div class="contact">
-                <form name="submitToGoogleSheet">
-                    <input type="text" name="NAME" placeholder="Name" required>
-                    <input type="email" name="EMAIL" placeholder="Email" required>
-                    <input type="text" name="SUBJECT" placeholder="Subject">
-                    <textarea name="MESSAGE" placeholder="Message"></textarea>
+                <form onsubmit="event.preventDefault(); sendMail();">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="subject" id="subject" placeholder="Subject">
+                    <textarea name="message" id="message" placeholder="Message"></textarea>
                     <input type="submit" value="Send Message" class="submit">
                 </form>
                 <span id="msg"></span>
@@ -234,8 +237,18 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+           emailjs.init({
+            //  privateKey: "bYLpL5wbYt39d8IjR58tS",
+             publicKey: "yQx2KF0mGak_URzXC"
+           });
+        })();
+     </script>
     <script src="script.js"></script>
     
+
     <!-------------------------- Footer section -------------------------->
    <footer class="footer">
     <small class="message">Thanks for visiting and happy coding!</small>
